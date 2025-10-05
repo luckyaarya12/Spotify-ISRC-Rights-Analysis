@@ -1,7 +1,3 @@
-# ----------------------------------------------------------------------
-# FINAL README.md CONTENT FOR GITHUB (CODE STYLE)
-# ----------------------------------------------------------------------
-
 # Spotify-ISRC-Rights-Analysis
 
 ## Project_Goal
@@ -27,4 +23,3 @@ The cross-referencing analysis found **zero (0) tracks** from the analyzed catal
 * `Pandas`
 * Valid Spotify Developer API Client ID and Secret.
 
-# ----------------------------------------------------------------------
