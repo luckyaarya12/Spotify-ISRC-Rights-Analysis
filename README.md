@@ -1,29 +1,30 @@
-Spotify Music Rights Analysis: Arijit Singh Catalog vs. Unclaimed Works
-Project Goal
-This project automates the retrieval and cross-referencing of a major artist's music catalog against a large public dataset of unclaimed music publishing rights. The primary objective was to identify any tracks where the ISRC code was present in the unclaimed works dataset.
+# ----------------------------------------------------------------------
+# FINAL README.md CONTENT FOR GITHUB (CODE STYLE)
+# ----------------------------------------------------------------------
 
-Methodology & Key Technical Achievements
-This analysis was built using Python, leveraging the Spotipy and Pandas libraries for efficiency.
+# Spotify-ISRC-Rights-Analysis
 
-Data Retrieval Scope: The solution successfully retrieved a comprehensive catalog of 980 unique tracks for the artist Arijit Singh.
+## Project_Goal
+This project automates the retrieval and cross-referencing of a major artist's music catalog against a large public dataset of unclaimed music publishing rights (`unclaimedmusicalworkrightshares.tsv`). The primary objective was to identify any tracks where the International Standard Recording Code (ISRC) was present in the unclaimed works dataset.
 
-Efficient Cross-Referencing (O(1) Lookup): The 9.3+ million record TSV file was indexed by the ISRC code to achieve near O(1) time complexity lookups.
+## Methodology_and_Achievements
+* **Language**: Python 3.x.
+* **Libraries**: `Spotipy` (for Spotify Web API) and `Pandas` (for data processing).
+* **Catalog_Scope**: Retrieved a comprehensive catalog of **980 unique tracks** for the artist Arijit Singh.
+* **Efficiency**: Achieved near **$\text{O}(1)$ time complexity** lookups by indexing the 9.3+ million record TSV file using the ISRC column.
+* **Problem_Solving**: Implemented a critical **`.drop_duplicates()`** operation to resolve a `ValueError` caused by duplicate ISRC labels in the raw data, ensuring a stable index for matching.
 
-Data Integrity Fix (Problem-Solving): A critical .drop_duplicates() operation was implemented prior to indexing to resolve a ValueError caused by duplicate ISRC entries. This ensured the stability and accuracy of the lookup process.
+## Final_Result
+The cross-referencing analysis found **zero (0) tracks** from the analyzed catalog that matched entries in the unclaimed works dataset.
 
-Final Result
-The cross-referencing analysis found zero (0) tracks from the analyzed catalog that matched entries in the unclaimed works dataset.
+## Repository_Contents
+* `Project_script.py`: The complete script containing the API logic and analysis.
+* `Unclaimed_Music_Rights_Analysis.xlsx`: The final three-sheet report (Catalog, Matches, Process Notes).
 
-Repository Contents
-Project_script.py: The full Python script containing the Spotify API connection, data processing, and analysis logic.
+## Requirements
+* Python 3.x
+* `Spotipy`
+* `Pandas`
+* Valid Spotify Developer API Client ID and Secret.
 
-Unclaimed_Music_Rights_Analysis.xlsx: The final report, including the full catalog, match results, and a detailed process notes sheet.
-
-Requirements
-Python 3.x
-
-Spotipy
-
-Pandas
-
-Requires a valid Spotify Developer API Client ID and Secret.
+# ----------------------------------------------------------------------
